@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" layout:decorator="layouts/mainFregment" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<body>
+<!-- MAIN -->
+<main role="main" layout:fragment="mainContent">
+    <article>
+        <!-- Header -->
+        <header class="section background-image text-center" style="background-image:url(/img/carousel-02.jpg)">
+            <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
+                Products
+            </h1>
+            <p class="animated-element text-white">Duis autem vel eum iriure dolor in hendrerit in</p>
+
+            <!-- white full width arrow object -->
+            <img class="arrow-object" src="/img/arrow-object-white.svg" alt="">
+        </header>
+    </article>
+    <article>
+        <header>
+            <h1 th:text="${product.name}">Ez a termék neve</h1>
+            <p>Akció: <span th:text="${product.discount}">50</span> %</p>
+            <p>Eddig tart az akció: <span
+                    th:text="${#dates.format(product.eod, 'yyyy. MM. dd HH:mm')}"> 2013. 03. 03.</span></p>
+            <p>Ár: <span th:text="${product.price}">200000</span>Ft</p>
+        </header>
+        <section>
+            <p th:text="${product.description}">Ez a leírás</p>
+            <p>Művész: <span th:text="${product.artist.name}">Készítő</span></p>
+        </section>
+        <hr/>
+    </article>
+</main>
+</body>
+</html>

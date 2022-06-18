@@ -1,0 +1,29 @@
+--DROP TABLE IF EXISTS artists;
+--
+--CREATE TABLE artists(
+--    id bigint NOT NULL,
+--    name varchar(100),
+--    age int,
+--    PRIMARY KEY (id)
+--)
+--
+--DROP Table IF Exists products;
+--
+--CREATE TABLE products(
+--    id bigint NOT NULL,
+--    name varchar(100),
+--    description TEXT,
+--    discount int,
+--    eod date,
+--    price int,
+--    artist_id int,
+--    PRIMARY KEY (id)
+--);
+--
+--insert into ARTISTS (id, age, name) values (1,23,'Béla');
+--insert into ARTISTS (id, age, name) values (2, 25,'Botond');
+--insert into PRODUCTS (id, name, description, discount, eod, price, artist_id) values (1, 'Alma', 'Ez egy gyönyörű alma', 20, '2017-01-01', 200000, (select id from artists where name = 'Béla' LIMIT 1));
+--insert into PRODUCTS (id, name, description, discount, eod, price, artist_id) values (2, 'Körte', 'Ez egy gyönyörű körte', 20, (SELECT NOW() LIMIT 1), 200000, 2);
+--insert into PRODUCTS (id, name, description, discount, eod, price, artist_id) values (3, 'Banán', 'Ez egy gyönyörű banán', 20, (SELECT NOW() LIMIT 1), 200000, 2);
+--insert into PRODUCTS (id, name, description, discount, eod, price, artist_id) values (4, 'Nagy Banán', '*confirmed*', 20, '2019-01-01', 200000, 2);
+select * from ARTISTS
